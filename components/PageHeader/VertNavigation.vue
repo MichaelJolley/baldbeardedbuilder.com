@@ -1,6 +1,5 @@
 <template>
-  <transition-expand>
-    <div v-if="menuExpanded" class="stripe">
+    <div v-if="mobileMenuExpanded" class="stripe">
       <NuxtLink
         to="/blog/"
         aria-label="Aggregated content Michael has generated"
@@ -22,18 +21,11 @@
         ><span>Swag</span></a
       >
     </div>
-  </transition-expand>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-import TransitionExpand from '../TransitionExpand.vue'
-
-export default {
-  components: { TransitionExpand },
-  computed: {
-    ...mapGetters(['menuExpanded']),
-  },
-}
+<script lang="ts" setup>
+  import useMenu from "@/composables/useMenu";
+  const { mobileMenuExpanded } = useMenu();
 </script>
 <style lang="scss" scoped>
 div {

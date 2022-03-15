@@ -11,18 +11,18 @@
   @apply relative;
 }
 
-.svg-icon >>> svg {
+.svg-icon :deep(svg) {
   height: 1em;
   width: 1em;
   stroke: none;
   fill: none;
 }
 
-.svg-icon >>> svg.fill {
+.svg-icon :deep(svg.fill) {
   @apply fill-current;
 }
 
-.svg-icon >>> svg.stroke {
+.svg-icon :deep(svg.stroke) {
   @apply stroke-current;
   @apply stroke-2;
   stroke-linecap: round;

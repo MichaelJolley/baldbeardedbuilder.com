@@ -15,7 +15,3 @@
     </svg>
   </IconHelper>
 </template>
-
-<script>
-export default {}
-</script>

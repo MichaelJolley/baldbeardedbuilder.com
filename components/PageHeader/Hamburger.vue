@@ -2,23 +2,13 @@
   <button
     class="hamburger"
     type="button"
-    :class="{ open: menuExpanded }"
-    @click="toggleExpanded"
+    :class="{ open: mobileMenuExpanded }"
+    @click="toggleMobileMenu"
   ></button>
 </template>
-<script>
-import { mapGetters, mapActions } from 'vuex'
-
-export default {
-  computed: {
-    ...mapGetters(['menuExpanded']),
-  },
-  methods: {
-    ...mapActions({
-      toggleExpanded: 'toggleExpanded',
-    }),
-  },
-}
+<script lang="ts" setup>
+import useMenu from "@/composables/useMenu";
+const { mobileMenuExpanded, toggleMobileMenu } = useMenu();
 </script>
 <style lang="scss" scoped>
 button {
