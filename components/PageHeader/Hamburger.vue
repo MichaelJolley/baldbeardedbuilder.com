@@ -7,8 +7,8 @@
   ></button>
 </template>
 <script lang="ts" setup>
-import useMenu from "@/composables/useMenu";
-const { mobileMenuExpanded, toggleMobileMenu } = useMenu();
+import { useMobileMenu } from "@/composables/useMobileMenu";
+const { mobileMenuExpanded, toggleMobileMenu } = useMobileMenu();
 </script>
 <style lang="scss" scoped>
 button {
@@ -26,7 +26,7 @@ button {
     @apply bg-darkPurple dark:bg-gray-100;
     @apply block;
     @apply h-1;
-    content: '';
+    content: "";
     transition: all 200ms ease-in-out;
   }
   &:before {

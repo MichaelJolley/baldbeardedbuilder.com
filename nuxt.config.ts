@@ -1,26 +1,20 @@
 import { defineNuxtConfig } from 'nuxt3'
 
-export default {
-  target: 'static',
-  ssr: false,
-  dev: true,
+import colorMode from '@/modules/colorMode';
+import tailwindcss from '@/modules/tailwindcss'
 
-  router: {
-    trailingSlash: true
-  },
-  
-  modules: [
-    '@nuxtjs/color-mode',
+export default defineNuxtConfig({
+
+  css: ["@/assets/scss/main.scss"],
+
+  buildModules: [
+    "@nuxtjs/tailwindcss"
   ],
 
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        }
-      }
-    },
-  },
-}
+  modules: [
+    "@nuxtjs/color-mode"
+  ],
+
+  colorMode,
+  tailwindcss,
+});

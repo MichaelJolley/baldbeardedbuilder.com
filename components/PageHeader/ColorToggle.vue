@@ -3,7 +3,7 @@
     <input
       id="switch"
       type="checkbox"
-      :v-model="$colorMode.preference"
+      v-model="$colorMode.preference"
       true-value="dark"
       false-value="light"
     />
@@ -14,9 +14,8 @@
     </label>
   </div>
 </template>
-<script setup lang="ts">
-  const colorMode = useColorMode()
-  colorMode.preference = colorMode.value
+<script setup>
+const colorMode = useColorMode()
 </script>
 <style lang="scss" scoped>
 .theme-switch-wrapper {

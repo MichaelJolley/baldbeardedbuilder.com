@@ -2,13 +2,13 @@
   <header>
     <section>
       <PageHeaderLogo />
-      <PageHeaderNavigation />
+      <!-- <PageHeaderNavigation />-->
       <div class="end">
-        <PageHeaderHamburger client:load/>
-        <PageHeaderDarkModeToggle client:load/>
+        <PageHeaderHamburger />
+        <PageHeaderColorToggle />
       </div>
     </section>
-    <PageHeaderVertNavigation client:load/>
+    <!-- <PageHeaderVertNavigation client:load/> -->
   </header>
 </template>
 <style lang="scss" scoped>
@@ -24,12 +24,12 @@ header {
     @apply lg:max-w-4xl xl:max-w-6xl;
 
     @apply text-gray-900 dark:text-white;
-        
+
     .end {
       @apply flex flex-row items-center;
       @apply justify-end;
     }
-        
+
     .logo {
       @apply text-gray-900 dark:text-white;
       @apply text-4xl;
